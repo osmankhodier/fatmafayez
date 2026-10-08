@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khodier CV</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690346624450707"
+     crossorigin="anonymous"></script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts (7 Distinct Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&family=Changa:wght@500;700&family=Inter:wght@400;600;700&family=Lateef:wght@400;700&family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Montserrat:wght@500;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+            roboto: ['Roboto', 'sans-serif'],
+            amiri: ['Amiri', 'serif'],
+            playfair: ['Playfair Display', 'serif'],
+            almarai: ['Almarai', 'sans-serif'],
+            opensans: ['Open Sans', 'sans-serif'],
+            changa: ['Changa', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            lateef: ['Lateef', 'serif'],
+            merriweather: ['Merriweather', 'serif'],
+            noto: ['Noto Sans Arabic', 'sans-serif'],
+            lato: ['Lato', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* إزاحة وتوحيد النقاط لجميع القوائم */
+    ul, ol {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    /* Dynamic Theme Color Variables */
+    :root {
+      --primary-color: #0284c7; /* Default Sky Blue */
+      --primary-hover: #0369a1;
+      --primary-light: #f0f9ff;
+      --primary-border: #38bdf8;
+    }
+
+    .dynamic-accent-bg { background-color: var(--primary-color) !important; }
+    .dynamic-accent-text { color: var(--primary-color) !important; }
+    .dynamic-accent-border { border-color: var(--primary-border) !important; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* Standard A4 Screen Dimension */
+    .a4-paper {
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      margin: 0 auto;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+
+    /* Interactive clickable links styling in preview */
+    .preview-link {
+      color: var(--primary-color);
+      text-decoration: underline;
+      transition: color 0.15s ease;
+    }
+    .preview-link:hover {
+      color: var(--primary-hover);
+    }
+
+    /* 7 Font Classes */
+    .font-style-modern { font-family: 'Cairo', 'Inter', sans-serif; }
+    .font-style-clean { font-family: 'Tajawal', 'Roboto', sans-serif; }
+    .font-style-classic { font-family: 'Amiri', 'Playfair Display', serif; }
+    .font-style-smooth { font-family: 'Almarai', 'Open Sans', sans-serif; }
+    .font-style-bold { font-family: 'Changa', 'Montserrat', sans-serif; }
+    .font-style-traditional { font-family: 'Lateef', 'Merriweather', serif; }
+    .font-style-standard { font-family: 'Noto Sans Arabic', 'Lato', sans-serif; }
+
+    /* Modern Print CSS Engine */
+    @page {
+      size: A4 portrait;
+      margin: 0 !important;
+    }
+
+    @media print {
+      html, body {
+        width: 210mm !important;
+        height: 100% !important;
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .no-print { display: none !important; }
+
+      #preview-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        display: block !important;
+        overflow: visible !important;
+        width: 100% !important;
+        box-shadow: none !important;
+      }
+
+      #resume-preview-wrapper {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #resume-preview, .a4-paper {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 210mm !important;
+        min-height: 297mm !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 8mm 12mm !important;
+        overflow: visible !important;
+        background-color: white !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    /* تنسيقات عامة للفوتر والطفح الإعلاني */
+    .site-footer {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .copyright-text {
+      margin: 0 0 15px 0;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .ad-space-web {
+      background-color: #fff9c4;
+      border: 2px dashed #fbc02d;
+      color: #333333;
+      padding: 15px;
+      margin: 10px auto 0 auto;
+      max-width: 728px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .ad-space-pdf {
+      display: none;
+      background-color: #e8f5e9;
+      border: 2px dashed #388e3c;
+      color: #1b5e20;
+      padding: 15px;
+      margin: 15px auto 0 auto;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+    @media print {
+      .ad-space-pdf {
+        display: block !important;
+      }
+
+      .ad-space-web {
+        display: none !important;
+      }
+
+      .site-footer {
+        background-color: transparent !important;
+        color: #000000 !important;
+        border-top: 1px solid #ccc;
+      }
+    }
+
+    /* ===== Resume Builder Pro - Upgrade Layer ===== */
+    .upgrade-toolbar{backdrop-filter:blur(10px)}
+    .upgrade-btn{transition:.18s ease;}
+    .upgrade-btn:hover{transform:translateY(-1px)}
+    .modal-backdrop{background:rgba(15,23,42,.62);backdrop-filter:blur(5px)}
+    .toast{animation:toastIn .22s ease-out}
+    @keyframes toastIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .ad-slot{min-height:90px;border:1px dashed #cbd5e1;background:linear-gradient(135deg,#f8fafc,#fff);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:11px}
+    @media(max-width:640px){.upgrade-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}.ad-slot{min-height:70px}}
+    @media print{.upgrade-only,.modal-backdrop,#toast-container,.ad-slot{display:none!important}}
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-cairo antialiased min-h-screen flex flex-col">
+
+  <!-- Fixed Top Language Bar -->
+  <div class="no-print bg-amber-500 text-slate-900 px-4 py-2 text-center text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-sm border-b border-amber-600 sticky top-0 z-50">
+    <i class="fa-solid fa-triangle-exclamation text-slate-900 text-base animate-bounce"></i>
+    <span>من فضلك قم باختيار لغة الـ CV المناسبة لك قبل البدء في تعديل البيانات.</span>
+  </div>
+
+  <!-- Main Header -->
+  <header id="app-header" class="no-print bg-slate-900 text-white border-b border-slate-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="bg-blue-600 text-white p-2 rounded-lg flex items-center justify-center font-bold text-xl">
+          <i class="fa-solid fa-file-invoice"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight">Khodier CV </h1>
+          <p class="text-xs text-slate-400 hidden sm:block">تصميم سيرة ذاتية تفاعلية ومطابقة للمعايير الذكية</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-medium border border-slate-700 transition-colors">
+          <i class="fa-solid fa-globe text-blue-400"></i>
+          <span id="lang-text">English (LTR)</span>
+        </button>
+
+        <button onclick="triggerPrint()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-blue-500/20 transition-all active:scale-95">
+          <i class="fa-solid fa-print"></i>
+          <span>طباعة / حفظ PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Upgrade Toolbar -->
+  <div class="upgrade-only no-print max-w-7xl w-full mx-auto px-3 sm:px-6 pt-3">
+    <div class="upgrade-toolbar grid grid-cols-2 sm:grid-cols-4 gap-2 bg-white/90 border border-slate-200 rounded-2xl p-2 shadow-sm">
+      <button onclick="openMyCVs()" class="upgrade-btn px-3 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold flex items-center justify-center gap-2"><i class="fa-solid fa-folder-open"></i> ملفاتي</button>
+      <button onclick="saveNamedCV()" class="upgrade-btn px-3 py-2.5 rounded-xl bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold flex items-center justify-center gap-2"><i class="fa-solid fa-floppy-disk"></i> حفظ CV</button>
+      <button onclick="newBlankCV()" class="upgrade-btn px-3 py-2.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold flex items-center justify-center gap-2"><i class="fa-solid fa-file-circle-plus"></i> CV جديد</button>
+      <button onclick="resetToDefaultData()" class="upgrade-btn px-3 py-2.5 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 text-xs font-bold flex items-center justify-center gap-2"><i class="fa-solid fa-rotate-right"></i> استعادة البيانات الأصلية</button>
+    </div>
+  </div>
+
+  <!-- Top Ad Slot -->
+  <div class="upgrade-only no-print max-w-7xl mx-auto px-3 sm:px-6 pt-3">
+    <div class="ad-slot"><span><i class="fa-solid fa-rectangle-ad ml-1"></i> مساحة إعلانية — ضع كود AdSense هنا</span></div>
+  </div>
+
+  <!-- Main Grid Workspace -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    
+    <!-- Sidebar / Inputs (5 Cols) -->
+    <section id="app-sidebar" class="no-print lg:col-span-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+      
+      <!-- Clear Data Header Bar -->
+      <div class="bg-slate-100 p-2 border-b border-slate-200 flex items-center justify-between">
+        <span class="text-xs font-bold text-slate-600 px-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-sliders text-blue-600"></i> لوحة التحكم والمدخلات
+        </span>
+        <button onclick="clearAllData()" class="px-2.5 py-1 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-lg text-xs font-semibold flex items-center gap-1 transition-colors">
+          <i class="fa-solid fa-trash-can"></i>
+          <span>مسح كل البيانات</span>
+        </button>
+      </div>
+
+      <!-- Section Navigation Tabs -->
+      <div class="border-b border-slate-200 bg-slate-50/50 p-2 grid grid-cols-3 sm:grid-cols-4 gap-1.5">
+        <button onclick="switchTab('templates')" id="tab-btn-templates" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all bg-white text-blue-600 shadow-sm border border-slate-200 text-center">
+          <i class="fa-solid fa-palette"></i>
+          <span>التصميم والألوان</span>
+        </button>
+        <button onclick="switchTab('personal')" id="tab-btn-personal" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all text-slate-600 hover:bg-white text-center">
+          <i class="fa-solid fa-user"></i>
+          <span>البيانات والصورة</span>
+        </button>
+        <button onclick="switchTab('sections')" id="tab-btn-sections" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all text-slate-600 hover:bg-white text-center">
+          <i class="fa-solid fa-sliders"></i>
+          <span>الأقسام</span>
+        </button>
+        <button onclick="switchTab('experience')" id="tab-btn-experience" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all text-slate-600 hover:bg-white text-center">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>الخبرات</span>
+        </button>
+        <button onclick="switchTab('courses')" id="tab-btn-courses" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all text-slate-600 hover:bg-white text-center">
+          <i class="fa-solid fa-certificate"></i>
+          <span>الدورات</span>
+        </button>
+        <button onclick="switchTab('education')" id="tab-btn-education" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all text-slate-600 hover:bg-white text-center">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>التعليم</span>
+        </button>
+        <button onclick="switchTab('skills')" id="tab-btn-skills" class="tab-btn px-2 py-2 rounded-lg text-[11px] font-semibold flex flex-col sm:flex-row items-center justify-center gap-1 transition-all text-slate-600 hover:bg-white text-center col-span-2 sm:col-span-2">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <span>المهارات واللغات</span>
+        </button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="p-4 sm:p-5 max-h-[calc(100vh-250px)] overflow-y-auto space-y-4">
+        
+        <!-- Tab 1: Templates, Fonts & Colors -->
+        <div id="tab-templates" class="tab-content space-y-4">
+          
+          <!-- Theme Color Selector -->
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-slate-800 flex items-center gap-1.5">
+              <i class="fa-solid fa-fill-drip text-blue-600"></i>
+              <span>اختر لون التمييز (7 ألوان مميزة)</span>
+            </label>
+            <div class="flex items-center justify-between pt-1 px-1">
+              <button onclick="setThemeColor('#0284c7', '#0369a1', '#f0f9ff', '#38bdf8')" class="w-7 h-7 rounded-full bg-sky-600 ring-2 ring-offset-1 ring-sky-600 hover:scale-110 transition-transform" title="Sky Blue"></button>
+              <button onclick="setThemeColor('#1e3a8a', '#1e40af', '#eff6ff', '#60a5fa')" class="w-7 h-7 rounded-full bg-blue-900 hover:scale-110 transition-transform" title="Navy Blue"></button>
+              <button onclick="setThemeColor('#334155', '#1e293b', '#f8fafc', '#94a3b8')" class="w-7 h-7 rounded-full bg-slate-700 hover:scale-110 transition-transform" title="Slate Charcoal"></button>
+              <button onclick="setThemeColor('#059669', '#047857', '#ecfdf5', '#34d399')" class="w-7 h-7 rounded-full bg-emerald-600 hover:scale-110 transition-transform" title="Emerald Green"></button>
+              <button onclick="setThemeColor('#9f1239', '#881337', '#fff1f2', '#fb7185')" class="w-7 h-7 rounded-full bg-rose-800 hover:scale-110 transition-transform" title="Burgundy Red"></button>
+              <button onclick="setThemeColor('#6b21a8', '#581c87', '#faf5ff', '#c084fc')" class="w-7 h-7 rounded-full bg-purple-800 hover:scale-110 transition-transform" title="Royal Purple"></button>
+              <button onclick="setThemeColor('#b45309', '#92400e', '#fffbeb', '#fbbf24')" class="w-7 h-7 rounded-full bg-amber-700 hover:scale-110 transition-transform" title="Amber Gold"></button>
+            </div>
+          </div>
+
+          <!-- Font Selection -->
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-slate-800 flex items-center gap-1.5">
+              <i class="fa-solid fa-font text-blue-600"></i>
+              <span>اختر نوع الخط (7 أنواع خطوط متنوعة)</span>
+            </label>
+            <select id="font-select" onchange="setFont(this.value)" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 bg-white font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option value="font-style-modern" selected>1. Cairo / Inter (عصري واحترافي)</option>
+              <option value="font-style-clean">2. Tajawal / Roboto (واضح ومرتب - ATS Friendly)</option>
+              <option value="font-style-classic">3. Amiri / Playfair Display (رسمي وجاد - Classic)</option>
+              <option value="font-style-smooth">4. Almarai / Open Sans (ناعم ومتناسق)</option>
+              <option value="font-style-bold">5. Changa / Montserrat (بارز وقوي)</option>
+              <option value="font-style-traditional">6. Lateef / Merriweather (كلاسيكي ورصين)</option>
+              <option value="font-style-standard">7. Noto Sans / Lato (قياسي ومتزن)</option>
+            </select>
+          </div>
+
+          <!-- Template Selection -->
+          <div class="space-y-2">
+            <h3 class="text-xs font-bold text-slate-800 flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-swatchbook text-blue-600"></i>
+              <span>اختر نمط القالب المفضل</span>
+            </h3>
+            <div class="grid grid-cols-2 gap-3">
+              <!-- القالب الأول: Modern Two-Column (يدعم صورة) -->
+              <button onclick="setTemplate('modern-twocol')" id="tpl-modern-twocol" class="tpl-card border-2 border-blue-600 bg-blue-50/30 p-3 rounded-xl text-right transition-all hover:shadow-md col-span-2">
+                <div class="flex gap-1 mb-2">
+                  <div class="w-1/3 h-2 dynamic-accent-bg rounded"></div>
+                  <div class="w-2/3 h-2 bg-slate-300 rounded"></div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="font-bold text-xs text-blue-700">Modern Two-Column</p>
+                  <span class="text-xs text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded flex items-center gap-1 font-semibold"><i class="fa-solid fa-image"></i> يتضمن صورة</span>
+                </div>
+                <p class="text-[10px] text-slate-500"></p>
+              </button>
+
+              <!-- القالب الثاني: Blue Line Accent -->
+              <button onclick="setTemplate('blueline')" id="tpl-blueline" class="tpl-card border border-slate-200 p-3 rounded-xl text-right transition-all hover:shadow-md col-span-2">
+                <div class="h-1.5 w-full dynamic-accent-bg rounded mb-2"></div>
+                <p class="font-bold text-xs text-sky-600">Blue Line Accent</p>
+                <p class="text-[10px] text-slate-500"></p>
+              </button>
+
+              <!-- القالب الثالث: Classic Traditional + Photo (يدعم صورة) -->
+              <button onclick="setTemplate('classic-photo')" id="tpl-classic-photo" class="tpl-card border border-slate-200 p-3 rounded-xl text-right transition-all hover:shadow-md col-span-2">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="w-6 h-6 rounded-full bg-slate-300 flex items-center justify-center text-[10px] text-slate-600"><i class="fa-solid fa-user"></i></div>
+                  <div class="h-1.5 flex-1 bg-slate-700 rounded"></div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <p class="font-bold text-xs text-slate-700">Classic Traditional + Photo</p>
+                  <span class="text-xs text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded flex items-center gap-1 font-semibold"><i class="fa-solid fa-image"></i> يتضمن صورة</span>
+                </div>
+                <p class="text-[10px] text-slate-500"></p>
+              </button>
+
+              <!-- القالب الرابع: ATS Clean -->
+              <button onclick="setTemplate('ats')" id="tpl-ats" class="tpl-card border border-slate-200 p-3 rounded-xl text-right transition-all hover:shadow-md col-span-2">
+                <div class="h-2 w-12 bg-slate-800 rounded mb-2"></div>
+                <p class="font-bold text-xs text-amber-700">ATS Clean</p>
+                <p class="text-[10px] text-slate-500"></p>
+              </button>
+              
+              <!-- القالب الخامس: Executive Leader -->
+              <button onclick="setTemplate('executive')" id="tpl-executive" class="tpl-card border border-slate-200 p-3 rounded-xl text-right transition-all hover:shadow-md col-span-2">
+                <div class="h-2 w-16 dynamic-accent-bg rounded mb-2"></div>
+                <p class="font-bold text-xs text-purple-700">Executive Leader</p>
+                <p class="text-[10px] text-slate-500"></p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Personal Info & Photo Upload -->
+        <div id="tab-personal" class="tab-content hidden space-y-3">
+          
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-image text-blue-600"></i>
+              <span>الصورة الشخصية (مطلوبة لقالب السي في التقليدي والعصري)</span>
+            </label>
+            <div class="flex items-center gap-3">
+              <input type="file" id="input-photo" accept="image/*" onchange="handlePhotoUpload(event)" class="text-xs text-slate-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+              <button onclick="removePhoto()" class="text-xs text-rose-600 hover:underline font-semibold hidden" id="remove-photo-btn">حذف الصورة</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">الاسم الكامل</label>
+            <input type="text" id="input-fullName" oninput="updateData()" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">المسمى الوظيفي</label>
+            <input type="text" id="input-jobTitle" oninput="updateData()" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">البريد الإلكتروني</label>
+              <input type="email" id="input-email" oninput="updateData()" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">رقم الهاتف</label>
+              <input type="text" id="input-phone" oninput="updateData()" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">العنوان / المدينة</label>
+              <input type="text" id="input-location" oninput="updateData()" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">رابط LinkedIn</label>
+              <input type="text" id="input-linkedin" oninput="updateData()" placeholder="https://..." class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">رابط معرض الأعمال / Portfolio</label>
+            <input type="text" id="input-resumeLink" oninput="updateData()" placeholder="https://..." class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">الملخص المهني (Professional Summary)</label>
+            <textarea id="input-summary" rows="4" oninput="updateData()" class="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+          </div>
+        </div>
+
+        <!-- Tab 3: Section Visibility Toggles -->
+        <div id="tab-sections" class="tab-content hidden space-y-3">
+          <h3 class="text-xs font-bold text-slate-800 mb-2">إظهار أو إخفاء أقسام السيرة الذاتية</h3>
+          <p class="text-[11px] text-slate-500 mb-3">يمكنك إيقاف تفعيل أي قسم ترغب بتغييبه مؤقتاً من المستند النهائي.</p>
+          <div id="visibility-toggles" class="space-y-2"></div>
+        </div>
+
+        <!-- Tab 4: Work Experience -->
+        <div id="tab-experience" class="tab-content hidden space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold text-slate-700">سجل الخبرات العملية</h4>
+            <button onclick="addExperience()" class="px-2.5 py-1 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-lg text-xs font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-plus text-[10px]"></i>
+              <span>إضافة خبرة</span>
+            </button>
+          </div>
+          <div id="experience-container" class="space-y-3"></div>
+        </div>
+
+        <!-- Tab 5: Training Courses -->
+        <div id="tab-courses" class="tab-content hidden space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold text-slate-700">الدورات التدريبية (Training Courses)</h4>
+            <button onclick="addCourse()" class="px-2.5 py-1 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-lg text-xs font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-plus text-[10px]"></i>
+              <span>إضافة دورة</span>
+            </button>
+          </div>
+          <div id="courses-container" class="space-y-3"></div>
+        </div>
+
+        <!-- Tab 6: Education -->
+        <div id="tab-education" class="tab-content hidden space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold text-slate-700">المؤهلات التعليمية</h4>
+            <button onclick="addEducation()" class="px-2.5 py-1 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-lg text-xs font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-plus text-[10px]"></i>
+              <span>إضافة مؤهل</span>
+            </button>
+          </div>
+          <div id="education-container" class="space-y-3"></div>
+        </div>
+
+        <!-- Tab 7: Categorized Skills & Languages -->
+        <div id="tab-skills" class="tab-content hidden space-y-4">
+          <h4 class="text-xs font-bold text-slate-700 mb-1">إدارة المهارات واللغات بالحقول المخصصة</h4>
+          
+          <!-- اختيار طريقة العرض -->
+          <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-blue-800">طريقة عرض قائمة المهارات:</label>
+            <div class="flex items-center gap-4 text-xs font-semibold text-slate-700">
+              <label class="flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="skillsLayout" value="grid" onchange="setSkillsLayout(this.value)" id="skills-layout-grid" class="text-blue-600 focus:ring-blue-500">
+                <span>مهارتين بجانب بعض (عمودين)</span>
+              </label>
+              <label class="flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="skillsLayout" value="list" onchange="setSkillsLayout(this.value)" id="skills-layout-list" class="text-blue-600 focus:ring-blue-500">
+                <span>كل مهارة في سطر (قائمة)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-blue-700">المهارات التخصصية / الأساسية (Core Skills)</label>
+            <div id="hard-skills-list" class="space-y-1"></div>
+            <div class="flex gap-1.5">
+              <input type="text" id="hard-skills-input" placeholder="إضافة مهارة تخصصية..." onkeypress="if(event.key==='Enter'){addCategorizedSkill('hardSkills', 'hard-skills-input');}" class="flex-1 text-xs p-2 rounded border border-slate-300">
+              <button onclick="addCategorizedSkill('hardSkills', 'hard-skills-input')" class="px-3 py-1 bg-blue-600 text-white rounded text-xs font-semibold">إضافة</button>
+            </div>
+          </div>
+
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-blue-700">المهارات التقنية (Technical Skills)</label>
+            <div id="tech-skills-list" class="space-y-1"></div>
+            <div class="flex gap-1.5">
+              <input type="text" id="tech-skills-input" placeholder="إضافة مهارة تقنية..." onkeypress="if(event.key==='Enter'){addCategorizedSkill('techSkills', 'tech-skills-input');}" class="flex-1 text-xs p-2 rounded border border-slate-300">
+              <button onclick="addCategorizedSkill('techSkills', 'tech-skills-input')" class="px-3 py-1 bg-blue-600 text-white rounded text-xs font-semibold">إضافة</button>
+            </div>
+          </div>
+
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-blue-700">المهارات الشخصية (Soft Skills)</label>
+            <div id="soft-skills-list" class="space-y-1"></div>
+            <div class="flex gap-1.5">
+              <input type="text" id="soft-skills-input" placeholder="إضافة مهارة شخصية..." onkeypress="if(event.key==='Enter'){addCategorizedSkill('softSkills', 'soft-skills-input');}" class="flex-1 text-xs p-2 rounded border border-slate-300">
+              <button onclick="addCategorizedSkill('softSkills', 'soft-skills-input')" class="px-3 py-1 bg-blue-600 text-white rounded text-xs font-semibold">إضافة</button>
+            </div>
+          </div>
+
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <label class="block text-xs font-bold text-blue-700">اللغات وتقييمها (Languages)</label>
+            <div id="languages-list" class="space-y-1"></div>
+            <div class="flex gap-1.5">
+              <input type="text" id="lang-name-input" placeholder="اللغة" class="flex-1 text-xs p-2 rounded border border-slate-300">
+              <select id="lang-level-input" class="text-xs p-2 rounded border border-slate-300 bg-white">
+                <option value="Native">Native (اللغة الأم)</option>
+                <option value="Fluent">Fluent (طلاقة)</option>
+                <option value="Advanced">Advanced (متقدم)</option>
+                <option value="Intermediate" selected>Intermediate (متوسط)</option>
+                <option value="Beginner">Beginner (مبتدئ)</option>
+              </select>
+              <button onclick="addCategorizedLanguage()" class="px-3 py-1 bg-blue-600 text-white rounded text-xs font-semibold">إضافة</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Document Viewport (7 Cols) -->
+    <section id="preview-container" class="lg:col-span-7 flex flex-col items-center overflow-x-auto pb-8">
+      <div class="no-print w-full flex items-center justify-between mb-3 px-2">
+        <div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+          <i class="fa-solid fa-eye text-blue-500"></i>
+          <span>المعاينة المباشرة المقاسة للطباعة (A4 Page Size)</span>
+        </div>
+        <span class="text-[11px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-mono">210mm x 297mm</span>
+      </div>
+
+      <!-- Resume Printable Element -->
+      <div id="resume-preview-wrapper" class="w-full flex justify-center">
+        <div id="resume-preview" class="a4-paper p-8 text-slate-800 shadow-xl rounded-sm font-style-modern">
+          <!-- Render Target -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="modal-layer" class="no-print hidden fixed inset-0 z-[100] modal-backdrop p-3 sm:p-6 overflow-y-auto">
+    <div class="min-h-full flex items-center justify-center">
+      <div id="upgrade-modal" class="w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div class="flex items-center justify-between px-5 py-4 border-b border-slate-200">
+          <div><h3 id="modal-title" class="font-extrabold text-slate-900">Resume Builder Pro</h3><p id="modal-subtitle" class="text-xs text-slate-500 mt-0.5"></p></div>
+          <button onclick="closeModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="modal-body" class="p-5"></div>
+      </div>
+    </div>
+  </div>
+  <div id="toast-container" class="no-print fixed bottom-5 left-5 z-[120] space-y-2"></div>
+
+  <!-- Footer with Advertising Spaces -->
+  <footer class="site-footer">
+    <p class="copyright-text">جميع الحقوق محفوظة © 2026 - Osman Khodier   </p>
+    
+    <!-- إعلان الموقع (يظهر في المتصفح فقط) -->
+    <div class="ad-space-web">
+      مساحة إعلانية للموقع (Banner 728x90) - ضَع كود Google AdSense أو إعلانك هنا
+    </div>
+
+    <!-- إعلان مستند الـ PDF (يظهر عند الطباعة أو حفظ الـ PDF) -->
+    <div class="ad-space-pdf">
+      تم إنشاء هذه السيرة الذاتية بواسطة  Khodier CV
+    </div>
+  </footer>
+
+  <script>
+    /* Upgrade Layer: local storage, CV manager */
+    const STORAGE_KEY = 'resume_builder_pro_state_v2';
+    const CVS_KEY = 'resume_builder_pro_cvs_v2';
+    let autosaveTimer = null;
+
+    function triggerPrint(){
+      window.print();
+    }
+
+    function getAppState(){
+      return {
+        currentLang, currentTemplate, currentFontClass, photoDataUrl, skillsLayout,
+        visibleSections: JSON.parse(JSON.stringify(visibleSections)),
+        formData: JSON.parse(JSON.stringify(formData)),
+        savedAt: new Date().toISOString()
+      };
+    }
+
+    function saveLocalState(show=false){
+      try{
+        const state=getAppState();
+        if((state.photoDataUrl||'').length>1800000) state.photoDataUrl='';
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        if(show) showToast('تم حفظ الـCV تلقائيًا على هذا الجهاز','success');
+      }catch(e){
+        console.warn('Local save failed',e);
+        showToast('تعذر الحفظ المحلي. جرّب حذف الصورة أو تقليل حجمها','error');
+      }
+    }
+
+    function scheduleAutosave(){
+      clearTimeout(autosaveTimer);
+      autosaveTimer=setTimeout(()=>saveLocalState(false),350);
+    }
+
+    function restoreLocalState(){
+      try{
+        const raw=localStorage.getItem(STORAGE_KEY);
+        if(!raw) return false;
+        const state=JSON.parse(raw);
+        if(!state || !state.formData) return false;
+        formData=state.formData;
+        currentLang=state.currentLang||'en';
+        currentTemplate=state.currentTemplate||'modern-twocol';
+        currentFontClass=state.currentFontClass||'font-style-modern';
+        skillsLayout=state.skillsLayout||'grid';
+        photoDataUrl=state.photoDataUrl||'';
+        if(state.visibleSections) visibleSections=state.visibleSections;
+        document.documentElement.dir=currentLang==='ar'?'rtl':'ltr';
+        const langText=document.getElementById('lang-text');
+        if(langText) langText.innerText=currentLang==='ar'?'English (LTR)':'العربية (RTL)';
+        return true;
+      }catch(e){return false}
+    }
+
+    function showToast(message,type='info'){
+      const wrap=document.getElementById('toast-container'); if(!wrap) return;
+      const colors={success:'bg-emerald-600',error:'bg-rose-600',info:'bg-slate-900'};
+      const el=document.createElement('div');
+      el.className=`toast ${colors[type]||colors.info} text-white px-4 py-3 rounded-xl shadow-xl text-xs font-bold flex items-center gap-2`;
+      el.innerHTML=`<i class="fa-solid ${type==='success'?'fa-circle-check':type==='error'?'fa-circle-exclamation':'fa-circle-info'}"></i><span>${escapeHtml(message)}</span>`;
+      wrap.appendChild(el); setTimeout(()=>el.remove(),2800);
+    }
+
+    function escapeHtml(value){
+      return String(value??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+    }
+
+    function openModal(title,subtitle,html){
+      document.getElementById('modal-title').textContent=title;
+      document.getElementById('modal-subtitle').textContent=subtitle||'';
+      document.getElementById('modal-body').innerHTML=html;
+      document.getElementById('modal-layer').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+    function closeModal(){
+      document.getElementById('modal-layer').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+    function newBlankCV(){
+      if(!confirm('بدء CV جديد؟ سيتم مسح البيانات الحالية من مساحة العمل. يمكنك استعادتها من ملفاتي إذا كنت حفظتها.')) return;
+      clearAllData();
+      setTimeout(()=>showToast('تم إنشاء CV جديد','success'),50);
+    }
+
+    function resetToDefaultData(){
+      if(!confirm('هل تريد استعادة البيانات الأصلية النموذجية للموقع؟ سيتم استبدال البيانات الحالية بالنموذج الافتراضي.')) return;
+      formData = JSON.parse(JSON.stringify(sampleData[currentLang]));
+      photoDataUrl = '';
+      document.getElementById('input-photo').value = '';
+      document.getElementById('remove-photo-btn').classList.add('hidden');
+      populateForm();
+      renderResume();
+      saveLocalState(false);
+      showToast('تم استعادة البيانات الأصلية بنجاح','success');
+    }
+
+    function saveNamedCV(){
+      const name=prompt('اكتب اسم النسخة، مثال: CV Accountant 2026');
+      if(!name || !name.trim()) return;
+      try{
+        const cvs=JSON.parse(localStorage.getItem(CVS_KEY)||'[]');
+        const state=getAppState();
+        const item={id:Date.now().toString(),name:name.trim(),savedAt:state.savedAt,state};
+        cvs.unshift(item);
+        localStorage.setItem(CVS_KEY,JSON.stringify(cvs.slice(0,30)));
+        saveLocalState(false);
+        showToast('تم حفظ نسخة: '+name.trim(),'success');
+      }catch(e){showToast('تعذر حفظ النسخة','error')}
+    }
+
+    function openMyCVs(){
+      let cvs=[]; try{cvs=JSON.parse(localStorage.getItem(CVS_KEY)||'[]')}catch(e){}
+      const list=cvs.length?cvs.map(cv=>`
+        <div class="flex items-center justify-between gap-3 p-3 rounded-2xl border border-slate-200 hover:bg-slate-50">
+          <div class="min-w-0"><div class="font-bold text-sm text-slate-800 truncate">${escapeHtml(cv.name)}</div><div class="text-[10px] text-slate-400 mt-1">${new Date(cv.savedAt).toLocaleString()}</div></div>
+          <div class="flex gap-1 shrink-0">
+            <button onclick="loadNamedCV('${cv.id}')" class="px-3 py-2 rounded-lg bg-blue-600 text-white text-xs font-bold">فتح</button>
+            <button onclick="deleteNamedCV('${cv.id}')" class="px-3 py-2 rounded-lg bg-rose-50 text-rose-600 text-xs font-bold">حذف</button>
+          </div>
+        </div>`).join(''):
+        '<div class="text-center py-10 text-slate-400"><i class="fa-regular fa-folder-open text-3xl mb-3"></i><p class="text-sm font-bold">لا توجد نسخ محفوظة بعد</p></div>';
+      openModal('ملفاتي المحفوظة','يتم الحفظ على هذا الجهاز فقط',`<div class="space-y-2">${list}</div>`);
+    }
+
+    function loadNamedCV(id){
+      try{
+        const cvs=JSON.parse(localStorage.getItem(CVS_KEY)||'[]');
+        const cv=cvs.find(x=>x.id===id); if(!cv) return;
+        const st=cv.state;
+        formData=st.formData; currentLang=st.currentLang||'en'; currentTemplate=st.currentTemplate||'modern-twocol'; currentFontClass=st.currentFontClass||'font-style-modern'; photoDataUrl=st.photoDataUrl||''; visibleSections=st.visibleSections||visibleSections; skillsLayout=st.skillsLayout||'grid';
+        document.documentElement.dir=currentLang==='ar'?'rtl':'ltr';
+        document.getElementById('lang-text').innerText=currentLang==='ar'?'English (LTR)':'العربية (RTL)';
+        renderVisibilityToggles(); populateForm(); renderResume(); closeModal(); saveLocalState(false); showToast('تم فتح النسخة المحفوظة','success');
+      }catch(e){showToast('تعذر فتح النسخة','error')}
+    }
+
+    function deleteNamedCV(id){
+      if(!confirm('حذف هذه النسخة؟')) return;
+      let cvs=JSON.parse(localStorage.getItem(CVS_KEY)||'[]'); cvs=cvs.filter(x=>x.id!==id); localStorage.setItem(CVS_KEY,JSON.stringify(cvs)); openMyCVs();
+    }
+
+    document.addEventListener('input', scheduleAutosave, true);
+    document.addEventListener('change', scheduleAutosave, true);
+    window.addEventListener('beforeunload', ()=>saveLocalState(false));
+
+    document.addEventListener('DOMContentLoaded',()=>{
+      const restored=restoreLocalState();
+      if(restored){
+        renderVisibilityToggles(); populateForm(); renderResume();
+        showToast('تم استعادة آخر CV محفوظ على هذا الجهاز','success');
+      }
+      setTimeout(()=>saveLocalState(false),500);
+    });
+  </script>
+
+  <script>
+    let currentLang = 'en';
+    let currentTemplate = 'modern-twocol'; // Set default template to new design
+    let currentFontClass = 'font-style-modern';
+    let photoDataUrl = ''; 
+    let skillsLayout = 'grid'; // 'grid' لمهارتين بجانب بعض، 'list' لكل مهارة في سطر
+
+    // Visibility State
+    let visibleSections = {
+      summary: true,
+      education: true,
+      courses: true,
+      experience: true,
+      skills: true,
+      languages: true
+    };
+
+    // Full Sample Data
+    const sampleData = {
+      en: {
+        fullName: "Osman Mohamed Khodier",
+        jobTitle: "Accountant",
+        email: "OsmanKhodier@gmail.com",
+        phone: "+20 (127) 131 2294",
+        location: "Al-Manzala, Dakahlia, Egypt",
+        linkedin: "https://linkedin.com/in/OsmanKhodier",
+        resumeLink: "https://drive.google.com",
+        summary: "Highly motivated Accounting graduate from Al-Azhar University with a solid foundation in financial accounting and financial reporting. Possesses practical experience in developing accounting systems and preparing financial statements. Proficient in Microsoft Office tools, especially Microsoft Excel, with the ability to organize financial data and prepare accurate reports and financial documents efficiently and professionally. Seeking an entry-level accounting position to apply academic knowledge, develop professional skills, and contribute effectively within a professional work environment.",
+        education: [
+          {
+            degree: "Bachelor's degree in commerce (Accounting)",
+            school: "Al-Azhar University – Cairo (Nasr City)",
+            gpa: "Grade / GPA: 80.29% (Very Good)",
+            period: "2020 – 2024"
+          }
+        ],
+        courses: [
+          {
+            title: "Accounting and Financial Statements Course",
+            period: "2024",
+            bullets: [
+              "Gained practical skills in recording journal entries up to preparing complete financial statements (Income Statement, Balance Sheet, and Trial Balance).",
+              "Developed a strong understanding of the full accounting cycle from transaction recording to final financial reporting."
+            ]
+          },
+          {
+            title: "Advanced Excel Course",
+            period: "2024",
+            bullets: [
+              "Developed an automated accounting system using Excel to generate Trial Balance, Income Statement, and Balance Sheet.",
+              "Utilized advanced Excel functions and formulas to improve accuracy and efficiency in financial data processing."
+            ]
+          },
+          {
+            title: "Introduction to Odoo (ERP Basics)",
+            period: "2024",
+            bullets: [
+              "Acquired foundational knowledge of the Odoo ERP system and its role in enterprise resource planning.",
+              "Gained basic understanding of how ERP systems integrate and manage accounting and financial operations within organizations."
+            ]
+          }
+        ],
+        experiences: [
+          {
+            title: "Financial Accountant Trainee",
+            company: "Accounting & Auditing Firm",
+            period: "2024",
+            desc: "Prepared trial balances accurately.\nSupported daily journal entries verification.\nAssisted in financial statement preparations and adjustments."
+          }
+        ],
+        hardSkills: ["Financial Accounting", "Financial Reporting", "Journal Entries & Ledgers", "Trial Balance & Balance Sheets"],
+        techSkills: ["Microsoft Excel (Automated Systems)", "Power Query & Power Pivot", "Odoo ERP Basics"],
+        softSkills: ["High Attention to Detail", "Analytical Thinking", "Time Management"],
+        languages: [
+          { name: "Arabic", level: "Native" },
+          { name: "English", level: "Good / Intermediate" }
+        ]
+      },
+      ar: {
+        fullName: "عثمان محمد خضير",
+        jobTitle: "محاسب مالى",
+        email: "OsmanKhodier@gmail.com",
+        phone: "+20 (127) 131 2294",
+        location: "المنزلة، الدقهلية، مصر",
+        linkedin: "https://linkedin.com/in/OsmanKhodier",
+        resumeLink: "https://drive.google.com",
+        summary: "خريج محاسبة طموح من جامعة الأزهر بأساس متين في المحاسبة المالية وإعداد التقارير المالية. يمتلك خبرة عملية في تطوير الأنظمة المحاسبية وإعداد القوائم المالية. متقن لأدوات Microsoft Office، ولا سيما برنامج Excel، مع القدرة على تنظيم البيانات المالية وإعداد تقارير دقيقة بكفاءة وااحترافية. أبحث عن فرصة عمل كمحاسب مبتدئ لتطبيق المعرفة الأكاديمية وتطوير المهارات المهنية.",
+        education: [
+          {
+            degree: "بكالوريوس التجارة (شعبة محاسبة)",
+            school: "جامعة الأزهر – القاهرة (مدينة نصر)",
+            gpa: "التقدير العام: 80.29% (جيد جداً)",
+            period: "2020 – 2024"
+          }
+        ],
+        courses: [
+          {
+            title: "دورة المحاسبة والقوائم المالية",
+            period: "2024",
+            bullets: [
+              "اكتساب مهارات عملية في تسجيل قيود اليومية وحتى إعداد القوائم المالية الكاملة (قائمة الدخل، الميزانية العمومية، وميزان المراجعة).",
+              "تطوير فهم قوي للدورة المحاسبية الكاملة من تسجيل المعاملات حتى التقارير المالية النهائية."
+            ]
+          },
+          {
+            title: "دورة اكسل المتقدم (Advanced Excel)",
+            period: "2024",
+            bullets: [
+              "تطوير نظام محاسبي آلي باستخدام Excel لإصدار ميزان المراجعة وقائمة الدخل والميزانية العمومية.",
+              "استخدام دالات وصيغ Excel المتقدمة لتحسين الدقة والكفاءة في معالجة البيانات المالية."
+            ]
+          },
+          {
+            title: "مقدمة في نظام أودو (Odoo ERP Basics)",
+            period: "2024",
+            bullets: [
+              "اكتساب المعرفة الأساسية بنظام Odoo ERP ودوره في تخطيط موارد المؤسسات.",
+              "فهم كيفية ربط وإدارة العمليات المحاسبية والمالية داخل المنظمات."
+            ]
+          }
+        ],
+        experiences: [
+          {
+            title: "متدرب محاسبة مالية",
+            company: "مكتب محاسبة ومراجعة",
+            period: "2024",
+            desc: "المشاركة في تسجيل ومراجعة قيود اليومية بانتظام.\nإعداد وتسوية موازين المراجعة الشهرية.\nالمساعدة في تجهيز وصياغة القوائم المالية النهائية."
+          }
+        ],
+        hardSkills: ["إعداد القوائم المالية", "تسجيل قيود اليومية", "تسوية الحسابات والتكلفة"],
+        techSkills: ["Microsoft Excel (Power Query)", "نظم ERP (Odoo)", "برمجة وتطوير الويب البسيط"],
+        softSkills: ["التفكير التحليلي وحل المشكلات", "إدارة الوقت والتنظيم", "التواصل الفعال والتكيف"],
+        languages: [
+          { name: "العربية", level: "اللغة الأم (Native)" },
+          { name: "إنجليزية", level: "متوسط (Intermediate)" }
+        ]
+      }
+    };
+
+    let formData = JSON.parse(JSON.stringify(sampleData[currentLang]));
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      renderVisibilityToggles();
+      populateForm();
+      renderResume();
+    });
+
+    // Clear All Data
+    function clearAllData() {
+      if (confirm('هل أنت تأكد من مسح جميع البيانات المدخلة والبدء بشرائح فارغة؟')) {
+        formData = {
+          fullName: '', jobTitle: '', email: '', phone: '', location: '', linkedin: '', resumeLink: '', summary: '',
+          education: [], courses: [], experiences: [], hardSkills: [], techSkills: [], softSkills: [], languages: []
+        };
+        photoDataUrl = '';
+        document.getElementById('input-photo').value = '';
+        document.getElementById('remove-photo-btn').classList.add('hidden');
+        populateForm();
+        renderResume();
+      }
+    }
+
+    // Handle Photo Upload
+    function handlePhotoUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          photoDataUrl = e.target.result;
+          document.getElementById('remove-photo-btn').classList.remove('hidden');
+          renderResume();
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function removePhoto() {
+      photoDataUrl = '';
+      document.getElementById('input-photo').value = '';
+      document.getElementById('remove-photo-btn').classList.add('hidden');
+      renderResume();
+    }
+
+    function setThemeColor(primary, hover, light, border) {
+      document.documentElement.style.setProperty('--primary-color', primary);
+      document.documentElement.style.setProperty('--primary-hover', hover);
+      document.documentElement.style.setProperty('--primary-light', light);
+      document.documentElement.style.setProperty('--primary-border', border);
+      renderResume();
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      document.getElementById('lang-text').innerText = currentLang === 'ar' ? 'English (LTR)' : 'العربية (RTL)';
+      formData = JSON.parse(JSON.stringify(sampleData[currentLang]));
+      renderVisibilityToggles();
+      populateForm();
+      renderResume();
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-blue-600', 'shadow-sm', 'border', 'border-slate-200');
+        btn.classList.add('text-slate-600');
+      });
+
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activeBtn) activeBtn.classList.add('bg-white', 'text-blue-600', 'shadow-sm', 'border', 'border-slate-200');
+    }
+
+    function setTemplate(tpl) {
+      currentTemplate = tpl;
+      document.querySelectorAll('.tpl-card').forEach(card => card.classList.remove('border-2', 'border-blue-600', 'bg-blue-50/30'));
+      const activeCard = document.getElementById(`tpl-${tpl}`);
+      if (activeCard) activeCard.classList.add('border-2', 'border-blue-600', 'bg-blue-50/30');
+      renderResume();
+    }
+
+    function setFont(fontClass) {
+      currentFontClass = fontClass;
+      const preview = document.getElementById('resume-preview');
+      preview.className = `a4-paper text-slate-800 shadow-xl rounded-sm ${fontClass}`;
+      renderResume();
+    }
+
+    function setSkillsLayout(layout) {
+      skillsLayout = layout;
+      renderResume();
+    }
+
+    function renderVisibilityToggles() {
+      const container = document.getElementById('visibility-toggles');
+      const labels = {
+        summary: currentLang === 'ar' ? 'الملخص المهني (Professional Summary)' : 'Professional Summary',
+        education: currentLang === 'ar' ? 'التعليم (Education)' : 'Education',
+        courses: currentLang === 'ar' ? 'الدورات التدريبية (Training Courses)' : 'Training Courses',
+        experience: currentLang === 'ar' ? 'الخبرات (Experience)' : 'Experience',
+        skills: currentLang === 'ar' ? 'المهارات (Skills)' : 'Skills',
+        languages: currentLang === 'ar' ? 'اللغات (Languages)' : 'Languages'
+      };
+
+      container.innerHTML = Object.keys(visibleSections).map(sec => `
+        <label class="flex items-center justify-between p-2 bg-slate-50 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+          <span class="text-xs font-semibold text-slate-700">${labels[sec]}</span>
+          <input type="checkbox" ${visibleSections[sec] ? 'checked' : ''} onchange="toggleSection('${sec}', this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+        </label>
+      `).join('');
+    }
+
+    function toggleSection(secKey, isChecked) {
+      visibleSections[secKey] = isChecked;
+      renderResume();
+    }
+
+    function updateData() {
+      formData.fullName = document.getElementById('input-fullName').value;
+      formData.jobTitle = document.getElementById('input-jobTitle').value;
+      formData.email = document.getElementById('input-email').value;
+      formData.phone = document.getElementById('input-phone').value;
+      formData.location = document.getElementById('input-location').value;
+      formData.linkedin = document.getElementById('input-linkedin').value;
+      formData.resumeLink = document.getElementById('input-resumeLink').value;
+      formData.summary = document.getElementById('input-summary').value;
+      renderResume();
+    }
+
+    function populateForm() {
+      document.getElementById('input-fullName').value = formData.fullName || '';
+      document.getElementById('input-jobTitle').value = formData.jobTitle || '';
+      document.getElementById('input-email').value = formData.email || '';
+      document.getElementById('input-phone').value = formData.phone || '';
+      document.getElementById('input-location').value = formData.location || '';
+      document.getElementById('input-linkedin').value = formData.linkedin || '';
+      document.getElementById('input-resumeLink').value = formData.resumeLink || '';
+      document.getElementById('input-summary').value = formData.summary || '';
+
+      const gridRadio = document.getElementById('skills-layout-grid');
+      const listRadio = document.getElementById('skills-layout-list');
+      if (gridRadio && listRadio) {
+        if (skillsLayout === 'grid') gridRadio.checked = true;
+        else listRadio.checked = true;
+      }
+
+      renderExperienceInputs();
+      renderCoursesInputs();
+      renderEducationInputs();
+      renderCategorizedSkillsInputs();
+    }
+
+    function addExperience() {
+      formData.experiences.push({ title: '', company: '', period: '', desc: '' });
+      renderExperienceInputs();
+      renderResume();
+    }
+
+    function removeExperience(idx) {
+      formData.experiences.splice(idx, 1);
+      renderExperienceInputs();
+      renderResume();
+    }
+
+    function renderExperienceInputs() {
+      const container = document.getElementById('experience-container');
+      container.innerHTML = '';
+      formData.experiences.forEach((exp, idx) => {
+        const item = document.createElement('div');
+        item.className = 'p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2 relative';
+        item.innerHTML = `
+          <button onclick="removeExperience(${idx})" class="absolute top-2 left-2 text-rose-500 hover:text-rose-700 text-xs p-1">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" placeholder="المسمى الوظيفي" value="${exp.title || ''}" oninput="formData.experiences[${idx}].title = this.value; renderResume();" class="text-xs p-2 rounded border border-slate-300">
+            <input type="text" placeholder="الشركة" value="${exp.company || ''}" oninput="formData.experiences[${idx}].company = this.value; renderResume();" class="text-xs p-2 rounded border border-slate-300">
+          </div>
+          <input type="text" placeholder="الفترة (مثال: 2024)" value="${exp.period || ''}" oninput="formData.experiences[${idx}].period = this.value; renderResume();" class="w-full text-xs p-2 rounded border border-slate-300">
+          <textarea placeholder="أضف مهامك وإنجازاتك (اكتب كل إنجاز/مهارة في سطر مستقل)" rows="3" oninput="formData.experiences[${idx}].desc = this.value; renderResume();" class="w-full text-xs p-2 rounded border border-slate-300 resize-none">${exp.desc || ''}</textarea>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function addCourse() {
+      formData.courses.push({ title: '', period: '', bullets: [''] });
+      renderCoursesInputs();
+      renderResume();
+    }
+
+    function removeCourse(idx) {
+      formData.courses.splice(idx, 1);
+      renderCoursesInputs();
+      renderResume();
+    }
+
+    function renderCoursesInputs() {
+      const container = document.getElementById('courses-container');
+      container.innerHTML = '';
+      formData.courses.forEach((crs, idx) => {
+        const item = document.createElement('div');
+        item.className = 'p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2 relative';
+        const bulletsText = Array.isArray(crs.bullets) ? crs.bullets.join('\n') : (crs.bullets || '');
+        item.innerHTML = `
+          <button onclick="removeCourse(${idx})" class="absolute top-2 left-2 text-rose-500 hover:text-rose-700 text-xs p-1">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <div class="grid grid-cols-3 gap-2">
+            <input type="text" placeholder="اسم الدورة التدريبية" value="${crs.title || ''}" oninput="formData.courses[${idx}].title = this.value; renderResume();" class="col-span-2 text-xs p-2 rounded border border-slate-300">
+            <input type="text" placeholder="السنة" value="${crs.period || ''}" oninput="formData.courses[${idx}].period = this.value; renderResume();" class="text-xs p-2 rounded border border-slate-300">
+          </div>
+          <textarea placeholder="النقاط والتفاصيل (كل نقطة في سطر مستقل)" rows="3" oninput="formData.courses[${idx}].bullets = this.value.split('\\n'); renderResume();" class="w-full text-xs p-2 rounded border border-slate-300 resize-none">${bulletsText}</textarea>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function addEducation() {
+      formData.education.push({ degree: '', school: '', gpa: '', period: '' });
+      renderEducationInputs();
+      renderResume();
+    }
+
+    function removeEducation(idx) {
+      formData.education.splice(idx, 1);
+      renderEducationInputs();
+      renderResume();
+    }
+
+    function renderEducationInputs() {
+      const container = document.getElementById('education-container');
+      container.innerHTML = '';
+      formData.education.forEach((edu, idx) => {
+        const item = document.createElement('div');
+        item.className = 'p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2 relative';
+        item.innerHTML = `
+          <button onclick="removeEducation(${idx})" class="absolute top-2 left-2 text-rose-500 hover:text-rose-700 text-xs p-1">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <input type="text" placeholder="الدرجة العلمية والتخصص" value="${edu.degree || ''}" oninput="formData.education[${idx}].degree = this.value; renderResume();" class="w-full text-xs p-2 rounded border border-slate-300">
+          <input type="text" placeholder="اسم الجامعة / المؤسسة" value="${edu.school || ''}" oninput="formData.education[${idx}].school = this.value; renderResume();" class="w-full text-xs p-2 rounded border border-slate-300">
+          <input type="text" placeholder="التقدير / GPA (تحت اسم الجامعة)" value="${edu.gpa || ''}" oninput="formData.education[${idx}].gpa = this.value; renderResume();" class="w-full text-xs p-2 rounded border border-slate-300">
+          <input type="text" placeholder="الفترة (مثال: 2020 – 2024)" value="${edu.period || ''}" oninput="formData.education[${idx}].period = this.value; renderResume();" class="w-full text-xs p-2 rounded border border-slate-300">
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function renderCategorizedSkillsInputs() {
+      const categories = ['hardSkills', 'techSkills', 'softSkills'];
+      categories.forEach(cat => {
+        const listDiv = document.getElementById(cat === 'hardSkills' ? 'hard-skills-list' : cat === 'techSkills' ? 'tech-skills-list' : 'soft-skills-list');
+        listDiv.innerHTML = '';
+        (formData[cat] || []).forEach((sk, idx) => {
+          const badge = document.createElement('div');
+          badge.className = 'flex items-center justify-between bg-white px-2 py-1 border border-slate-200 rounded text-xs';
+          badge.innerHTML = `
+            <span>${sk}</span>
+            <button onclick="removeCategorizedSkill('${cat}', ${idx})" class="text-rose-500 hover:text-rose-700 font-bold ml-2">&times;</button>
+          `;
+          listDiv.appendChild(badge);
+        });
+      });
+
+      const langList = document.getElementById('languages-list');
+      langList.innerHTML = '';
+      (formData.languages || []).forEach((lg, idx) => {
+        const badge = document.createElement('div');
+        badge.className = 'flex items-center justify-between bg-white px-2 py-1 border border-slate-200 rounded text-xs';
+        badge.innerHTML = `
+          <span><strong>${lg.name}</strong>: ${lg.level}</span>
+          <button onclick="removeCategorizedLanguage(${idx})" class="text-rose-500 hover:text-rose-700 font-bold ml-2">&times;</button>
+        `;
+        langList.appendChild(badge);
+      });
+    }
+
+    function addCategorizedSkill(category, inputId) {
+      const input = document.getElementById(inputId);
+      const val = input.value.trim();
+      if (!val) return;
+      if (!formData[category]) formData[category] = [];
+      formData[category].push(val);
+      input.value = '';
+      renderCategorizedSkillsInputs();
+      renderResume();
+    }
+
+    function removeCategorizedSkill(category, idx) {
+      formData[category].splice(idx, 1);
+      renderCategorizedSkillsInputs();
+      renderResume();
+    }
+
+    function addCategorizedLanguage() {
+      const nameInput = document.getElementById('lang-name-input');
+      const levelInput = document.getElementById('lang-level-input');
+      const name = nameInput.value.trim();
+      const level = levelInput.value;
+      if (!name) return;
+      if (!formData.languages) formData.languages = [];
+      formData.languages.push({ name, level });
+      nameInput.value = '';
+      renderCategorizedSkillsInputs();
+      renderResume();
+    }
+
+    function removeCategorizedLanguage(idx) {
+      formData.languages.splice(idx, 1);
+      renderCategorizedSkillsInputs();
+      renderResume();
+    }
+
+    function formatUrl(url) {
+      if (!url) return '#';
+      if (url.startsWith('http://') || url.startsWith('https://')) return url;
+      return 'https://' + url;
+    }
+
+    function buildSkillsContent(isAr, titleClass = "dynamic-accent-text border-b dynamic-accent-border") {
+      if (!visibleSections.skills) return '';
+      let skillsBlocks = '';
+
+      const listClass = skillsLayout === 'grid' 
+        ? 'grid grid-cols-2 gap-x-4 gap-y-0.5 list-disc list-inside px-2' 
+        : 'list-disc list-inside space-y-0.5 px-2';
+
+      if (formData.hardSkills && formData.hardSkills.length) {
+        const hardList = formData.hardSkills.map(s => `<li class="mb-0.5">${s}</li>`).join('');
+        skillsBlocks += `
+          <div class="mb-2">
+            <strong class="block text-slate-900 text-[11px] mb-1">${isAr ? 'المهارات التخصصية / الأساسية (Core Skills):' : 'Core Skills:'}</strong>
+            <ul class="${listClass}">${hardList}</ul>
+          </div>`;
+      }
+
+      if (formData.techSkills && formData.techSkills.length) {
+        const techList = formData.techSkills.map(s => `<li class="mb-0.5">${s}</li>`).join('');
+        skillsBlocks += `
+          <div class="mb-2">
+            <strong class="block text-slate-900 text-[11px] mb-1">${isAr ? 'المهارات التقنية (Technical Skills):' : 'Technical Skills:'}</strong>
+            <ul class="${listClass}">${techList}</ul>
+          </div>`;
+      }
+
+      if (formData.softSkills && formData.softSkills.length) {
+        const softList = formData.softSkills.map(s => `<li class="mb-0.5">${s}</li>`).join('');
+        skillsBlocks += `
+          <div class="mb-2">
+            <strong class="block text-slate-900 text-[11px] mb-1">${isAr ? 'المهارات الشخصية (Soft Skills):' : 'Soft Skills:'}</strong>
+            <ul class="${listClass}">${softList}</ul>
+          </div>`;
+      }
+
+      if (!skillsBlocks) return '';
+      return `
+        <div class="mb-4">
+          <h3 class="text-xs font-bold uppercase tracking-wider ${titleClass} pb-1 mb-2">
+            <span>${isAr ? 'المهارات الاحترافية' : 'SKILLS'}</span>
+          </h3>
+          <div class="text-[10.5px] text-slate-700 leading-relaxed">${skillsBlocks}</div>
+        </div>
+      `;
+    }
+
+    function buildLanguagesContent(isAr, titleClass = "dynamic-accent-text border-b dynamic-accent-border") {
+      if (!visibleSections.languages || !formData.languages || !formData.languages.length) return '';
+
+      const langItems = formData.languages.map(l => `
+        <span class="inline-flex items-center gap-1.5">
+          <span class="w-[5.2px] h-[5.2px] rounded-full bg-slate-800 shrink-0"></span>
+          <strong class="text-slate-900 font-semibold">${l.name}:</strong>
+          <span class="text-slate-600">${l.level}</span>
+        </span>
+      `).join('');
+
+      return `
+        <div class="mb-4">
+          <h3 class="text-xs font-bold uppercase tracking-wider ${titleClass} pb-1 mb-2">
+            <span>${isAr ? 'اللغات' : 'LANGUAGES'}</span>
+          </h3>
+          <div class="text-[10.5px] text-slate-700 leading-relaxed px-1">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+              ${langItems}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // تنسيق محتوى الخبرات ليكون بنفس نسق ومساواة نقاط قسم المهارات والدورات
+    function formatExperienceDesc(desc) {
+      if (!desc) return '';
+      const lines = desc.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+      return `
+        <ul class="list-disc list-inside text-[10.5px] text-slate-600 mt-1 space-y-0.5 px-2">
+          ${lines.map(l => `<li class="mb-0.5">${l}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    function renderResume() {
+      const preview = document.getElementById('resume-preview');
+      const d = formData;
+      const isAr = currentLang === 'ar';
+
+      // Reset Padding for two-col template compatibility
+      if (currentTemplate === 'modern-twocol') {
+        preview.style.padding = '0';
+      } else {
+        preview.style.padding = '2rem';
+      }
+
+      if (currentTemplate === 'modern-twocol') {
+        renderModernTwoColTemplate(preview, d, isAr);
+      } else if (currentTemplate === 'classic-photo') {
+        renderClassicPhotoTemplate(preview, d, isAr);
+      } else if (currentTemplate === 'ats') {
+        renderATSTemplate(preview, d, isAr);
+      } else if (currentTemplate === 'executive') {
+        renderExecutiveTemplate(preview, d, isAr);
+      } else {
+        renderBlueLineTemplate(preview, d, isAr);
+      }
+    }
+
+    /* Template 6 (New): Modern Two-Column Template */
+    function renderModernTwoColTemplate(preview, d, isAr) {
+      preview.innerHTML = `
+        <div class="flex h-full min-h-[297mm] ${isAr ? 'flex-row' : 'flex-row'}">
+          <!-- Left Sidebar -->
+          <div class="w-1/3 bg-slate-100 p-6 border-r border-slate-200 flex flex-col justify-between" style="background-color: var(--primary-light);">
+            <div>
+              <!-- Photo -->
+              <div class="flex justify-center mb-6">
+                ${photoDataUrl ? `
+                  <div class="w-32 h-32 rounded-full border-4 dynamic-accent-border overflow-hidden shadow-md bg-white">
+                    <img src="${photoDataUrl}" alt="Profile Photo" class="w-full h-full object-cover">
+                  </div>
+                ` : `
+                  <div class="w-32 h-32 rounded-full border-4 border-dashed border-slate-300 overflow-hidden bg-white flex flex-col items-center justify-center text-slate-400">
+                    <i class="fa-solid fa-user text-3xl mb-1"></i>
+                    <span class="text-[10px] text-center px-1">${isAr ? 'الصورة الشخصية' : 'Photo'}</span>
+                  </div>
+                `}
+              </div>
+
+              <!-- Contact Info -->
+              <div class="mb-6 space-y-2.5 text-[11px]">
+                <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">
+                  ${isAr ? 'معلومات التواصل' : 'CONTACT'}
+                </h3>
+                ${d.phone ? `<div class="flex items-center gap-2 text-slate-700"><i class="fa-solid fa-phone dynamic-accent-text w-4"></i><a href="tel:${d.phone}" class="preview-link">${d.phone}</a></div>` : ''}
+                ${d.email ? `<div class="flex items-center gap-2 text-slate-700"><i class="fa-solid fa-envelope dynamic-accent-text w-4"></i><a href="mailto:${d.email}" class="preview-link break-all">${d.email}</a></div>` : ''}
+                ${d.location ? `<div class="flex items-center gap-2 text-slate-700"><i class="fa-solid fa-location-dot dynamic-accent-text w-4"></i><span>${d.location}</span></div>` : ''}
+                ${d.linkedin ? `<div class="flex items-center gap-2 text-slate-700"><i class="fa-brands fa-linkedin dynamic-accent-text w-4"></i><a href="${formatUrl(d.linkedin)}" target="_blank" class="preview-link break-all">LinkedIn</a></div>` : ''}
+                ${d.resumeLink ? `<div class="flex items-center gap-2 text-slate-700"><i class="fa-solid fa-link dynamic-accent-text w-4"></i><a href="${formatUrl(d.resumeLink)}" target="_blank" class="preview-link break-all">Portfolio</a></div>` : ''}
+              </div>
+
+              <!-- Education -->
+              ${visibleSections.education && d.education && d.education.length ? `
+                <div class="mb-6">
+                  <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">
+                    ${isAr ? 'التعليم' : 'EDUCATION'}
+                  </h3>
+                  <div class="space-y-3">
+                    ${d.education.map(edu => `
+                      <div>
+                        <div class="font-bold text-[11px] text-slate-800">${edu.degree || ''}</div>
+                        <div class="text-[10px] text-slate-600">${edu.school || ''}</div>
+                        ${edu.gpa ? `<div class="text-[10px] text-slate-700">${edu.gpa}</div>` : ''}
+                        <div class="text-[9.5px] dynamic-accent-text font-semibold">${edu.period || ''}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- Languages Side Section -->
+              ${visibleSections.languages && d.languages && d.languages.length ? `
+                <div class="mb-6">
+                  <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">
+                    ${isAr ? 'اللغات' : 'LANGUAGES'}
+                  </h3>
+                  <div class="space-y-1.5 text-[11px]">
+                    ${d.languages.map(l => `
+                      <div class="flex justify-between items-center text-slate-700">
+                        <span class="font-semibold">${l.name}</span>
+                        <span class="text-[10px] text-slate-500">${l.level}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+
+          <!-- Right Content Area -->
+          <div class="w-2/3 p-6 flex flex-col justify-between bg-white">
+            <div>
+              <!-- Header -->
+              <div class="border-b-2 dynamic-accent-border pb-4 mb-4">
+                <h1 class="text-2xl font-extrabold text-slate-900 uppercase tracking-tight">${d.fullName || ''}</h1>
+                <h2 class="text-xs font-bold dynamic-accent-text tracking-wider uppercase mt-1">${d.jobTitle || ''}</h2>
+              </div>
+
+              <!-- Profile / Summary -->
+              ${visibleSections.summary && d.summary ? `
+                <div class="mb-4">
+                  <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-1.5">
+                    ${isAr ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}
+                  </h3>
+                  <p class="text-[11px] text-slate-700 leading-relaxed text-justify">${d.summary}</p>
+                </div>
+              ` : ''}
+
+              <!-- Experience -->
+              ${visibleSections.experience && d.experiences && d.experiences.length ? `
+                <div class="mb-4">
+                  <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">
+                    ${isAr ? 'الخبرات العملية' : 'EXPERIENCE'}
+                  </h3>
+                  <div class="space-y-3">
+                    ${d.experiences.map(exp => `
+                      <div>
+                        <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-800">
+                          <span>${exp.title || ''} - ${exp.company || ''}</span>
+                          <span class="text-slate-500 text-[10px]">${exp.period || ''}</span>
+                        </div>
+                        ${formatExperienceDesc(exp.desc)}
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- Courses -->
+              ${visibleSections.courses && d.courses && d.courses.length ? `
+                <div class="mb-4">
+                  <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">
+                    ${isAr ? 'الدورات التدريبية' : 'COURSES'}
+                  </h3>
+                  <div class="space-y-2.5">
+                    ${d.courses.map(crs => `
+                      <div>
+                        <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-800">
+                          <span>${crs.title || ''}</span>
+                          <span class="text-slate-500 text-[10px]">${crs.period || ''}</span>
+                        </div>
+                        ${Array.isArray(crs.bullets) && crs.bullets.length ? `
+                          <ul class="list-disc list-inside text-[10.5px] text-slate-600 mt-1 space-y-0.5 px-2">
+                            ${crs.bullets.filter(b => b.trim()).map(b => `<li class="mb-0.5">${b}</li>`).join('')}
+                          </ul>
+                        ` : ''}
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- Main Skills -->
+              ${buildSkillsContent(isAr)}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* Template: Classic Traditional + Photo */
+    function renderClassicPhotoTemplate(preview, d, isAr) {
+      preview.innerHTML = `
+        <div class="border-b-2 border-slate-800 pb-4 mb-4">
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex-1">
+              <h1 class="text-2xl font-bold text-slate-900 uppercase">${d.fullName || ''}</h1>
+              <h2 class="text-xs font-bold text-slate-700 tracking-wider uppercase mt-1">${d.jobTitle || ''}</h2>
+              <div class="text-[10.5px] text-slate-600 mt-2 space-y-1">
+                ${d.phone ? `<div><i class="fa-solid fa-phone ${isAr?'ml-1':'mr-1'}"></i><a href="tel:${d.phone}" class="preview-link">${d.phone}</a></div>` : ''}
+                ${d.email ? `<div><i class="fa-solid fa-envelope ${isAr?'ml-1':'mr-1'}"></i><a href="mailto:${d.email}" class="preview-link">${d.email}</a></div>` : ''}
+                ${d.location ? `<div><i class="fa-solid fa-location-dot ${isAr?'ml-1':'mr-1'}"></i>${d.location}</div>` : ''}
+                ${d.linkedin ? `<div><i class="fa-brands fa-linkedin ${isAr?'ml-1':'mr-1'}"></i><a href="${formatUrl(d.linkedin)}" target="_blank" class="preview-link">LinkedIn</a></div>` : ''}
+                ${d.resumeLink ? `<div><i class="fa-solid fa-link ${isAr?'ml-1':'mr-1'}"></i><a href="${formatUrl(d.resumeLink)}" target="_blank" class="preview-link">Portfolio</a></div>` : ''}
+              </div>
+            </div>
+            ${photoDataUrl ? `
+              <div class="w-28 h-32 rounded border-2 border-slate-300 overflow-hidden flex-shrink-0 bg-slate-100">
+                <img src="${photoDataUrl}" alt="Profile Photo" class="w-full h-full object-cover">
+              </div>
+            ` : `
+              <div class="w-28 h-32 rounded border-2 border-dashed border-slate-300 overflow-hidden flex-shrink-0 bg-slate-50 flex flex-col items-center justify-center text-slate-400">
+                <i class="fa-solid fa-user text-2xl mb-1"></i>
+                <span class="text-[9px] text-center px-1">${isAr ? 'الصورة الشخصية' : 'Photo'}</span>
+              </div>
+            `}
+          </div>
+        </div>
+
+        ${visibleSections.summary && d.summary ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-400 pb-1 mb-1.5">${isAr ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}</h3>
+            <p class="text-[11px] text-slate-700 leading-relaxed text-justify">${d.summary}</p>
+          </div>
+        ` : ''}
+
+        ${visibleSections.education && d.education && d.education.length ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-400 pb-1 mb-2">${isAr ? 'التعليم والمؤهلات' : 'EDUCATION'}</h3>
+            <div class="space-y-2">
+              ${d.education.map(edu => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-900">
+                    <span>${edu.degree || ''}</span>
+                    <span class="text-slate-600 text-[10px]">${edu.period || ''}</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-700">${edu.school || ''}</div>
+                  ${edu.gpa ? `<div class="text-[10.5px] text-slate-800 my-0.5">${edu.gpa}</div>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${visibleSections.experience && d.experiences && d.experiences.length ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-400 pb-1 mb-2">${isAr ? 'الخبرات العملية' : 'EXPERIENCE'}</h3>
+            <div class="space-y-3">
+              ${d.experiences.map(exp => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-900">
+                    <span>${exp.title || ''} - ${exp.company || ''}</span>
+                    <span class="text-slate-600 text-[10px]">${exp.period || ''}</span>
+                  </div>
+                  ${formatExperienceDesc(exp.desc)}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${visibleSections.courses && d.courses && d.courses.length ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-400 pb-1 mb-2">${isAr ? 'الدورات التدريبية' : 'TRAINING COURSES'}</h3>
+            <div class="space-y-2">
+              ${d.courses.map(crs => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-900">
+                    <span>${crs.title || ''}</span>
+                    <span class="text-slate-600 text-[10px]">${crs.period || ''}</span>
+                  </div>
+                  ${Array.isArray(crs.bullets) && crs.bullets.length ? `
+                    <ul class="list-disc list-inside text-[10.5px] text-slate-700 mt-1 space-y-0.5 px-2">
+                      ${crs.bullets.filter(b => b.trim()).map(b => `<li class="mb-0.5">${b}</li>`).join('')}
+                    </ul>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${buildSkillsContent(isAr, "text-slate-900 border-b border-slate-400")}
+        ${buildLanguagesContent(isAr, "text-slate-900 border-b border-slate-400")}
+      `;
+    }
+
+    /* Template: Blue Line Accent */
+    function renderBlueLineTemplate(preview, d, isAr) {
+      preview.innerHTML = `
+        <div class="border-b-2 dynamic-accent-border pb-4 mb-4 text-center">
+          <h1 class="text-2xl font-extrabold text-slate-900 uppercase tracking-tight">${d.fullName || ''}</h1>
+          <h2 class="text-xs font-bold dynamic-accent-text tracking-wide uppercase mt-1">${d.jobTitle || ''}</h2>
+          
+          <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[11px] text-slate-600 mt-3">
+            ${d.phone ? `<div><i class="fa-solid fa-phone dynamic-accent-text ${isAr?'ml-1':'mr-1'}"></i><a href="tel:${d.phone}" class="preview-link">${d.phone}</a></div>` : ''}
+            ${d.email ? `<div><i class="fa-solid fa-envelope dynamic-accent-text ${isAr?'ml-1':'mr-1'}"></i><a href="mailto:${d.email}" class="preview-link">${d.email}</a></div>` : ''}
+            ${d.location ? `<div><i class="fa-solid fa-location-dot dynamic-accent-text ${isAr?'ml-1':'mr-1'}"></i>${d.location}</div>` : ''}
+            ${d.linkedin ? `<div><i class="fa-brands fa-linkedin dynamic-accent-text ${isAr?'ml-1':'mr-1'}"></i><a href="${formatUrl(d.linkedin)}" target="_blank" class="preview-link">LinkedIn</a></div>` : ''}
+            ${d.resumeLink ? `<div><i class="fa-solid fa-link dynamic-accent-text ${isAr?'ml-1':'mr-1'}"></i><a href="${formatUrl(d.resumeLink)}" target="_blank" class="preview-link">Portfolio</a></div>` : ''}
+          </div>
+        </div>
+
+        ${visibleSections.summary && d.summary ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-1.5">${isAr ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}</h3>
+            <p class="text-[11px] text-slate-700 leading-relaxed text-justify">${d.summary}</p>
+          </div>
+        ` : ''}
+
+        ${visibleSections.education && d.education && d.education.length ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">${isAr ? 'التعليم والمؤهلات' : 'EDUCATION'}</h3>
+            <div class="space-y-2.5">
+              ${d.education.map(edu => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-800">
+                    <span>${edu.degree || ''}</span>
+                    <span class="text-slate-500 text-[10px]">${edu.period || ''}</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-600">${edu.school || ''}</div>
+                  ${edu.gpa ? `<div class="text-[11px] text-slate-700 my-0.5">${edu.gpa}</div>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${visibleSections.experience && d.experiences && d.experiences.length ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">${isAr ? 'الخبرات العملية' : 'EXPERIENCE'}</h3>
+            <div class="space-y-3">
+              ${d.experiences.map(exp => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-800">
+                    <span>${exp.title || ''} - ${exp.company || ''}</span>
+                    <span class="text-slate-500 text-[10px]">${exp.period || ''}</span>
+                  </div>
+                  ${formatExperienceDesc(exp.desc)}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${visibleSections.courses && d.courses && d.courses.length ? `
+          <div class="mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b dynamic-accent-border pb-1 mb-2">${isAr ? 'الدورات التدريبية' : 'TRAINING COURSES'}</h3>
+            <div class="space-y-2.5">
+              ${d.courses.map(crs => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-[11.5px] text-slate-800">
+                    <span>${crs.title || ''}</span>
+                    <span class="text-slate-500 text-[10px]">${crs.period || ''}</span>
+                  </div>
+                  ${Array.isArray(crs.bullets) && crs.bullets.length ? `
+                    <ul class="list-disc list-inside text-[10.5px] text-slate-600 mt-1 space-y-0.5 px-2">
+                      ${crs.bullets.filter(b => b.trim()).map(b => `<li class="mb-0.5">${b}</li>`).join('')}
+                    </ul>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${buildSkillsContent(isAr)}
+        ${buildLanguagesContent(isAr)}
+      `;
+    }
+
+    /* Template: ATS Clean */
+    function renderATSTemplate(preview, d, isAr) {
+      preview.innerHTML = `
+        <div class="text-center border-b border-slate-900 pb-3 mb-4">
+          <h1 class="text-xl font-bold text-black uppercase tracking-wider">${d.fullName || ''}</h1>
+          <p class="text-xs font-semibold text-slate-800 uppercase mt-0.5">${d.jobTitle || ''}</p>
+          <div class="text-[11px] text-slate-800 mt-2 flex justify-center flex-wrap gap-2">
+            ${d.phone ? `<a href="tel:${d.phone}" class="preview-link">${d.phone}</a> | ` : ''}
+            ${d.email ? `<a href="mailto:${d.email}" class="preview-link">${d.email}</a> | ` : ''}
+            ${d.location ? `<span>${d.location}</span> | ` : ''}
+            ${d.linkedin ? `<a href="${formatUrl(d.linkedin)}" target="_blank" class="preview-link">LinkedIn</a> | ` : ''}
+            ${d.resumeLink ? `<a href="${formatUrl(d.resumeLink)}" target="_blank" class="preview-link">Portfolio</a>` : ''}
+          </div>
+        </div>
+
+        ${visibleSections.summary && d.summary ? `
+          <div class="mb-4">
+            <h2 class="text-xs font-bold text-black uppercase tracking-wider border-b border-slate-400 pb-0.5 mb-1.5">${isAr ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}</h2>
+            <p class="text-[11px] text-slate-900 leading-relaxed text-justify">${d.summary}</p>
+          </div>
+        ` : ''}
+
+        ${visibleSections.education && d.education && d.education.length ? `
+          <div class="mb-4">
+            <h2 class="text-xs font-bold text-black uppercase tracking-wider border-b border-slate-400 pb-0.5 mb-2">${isAr ? 'التعليم' : 'EDUCATION'}</h2>
+            ${d.education.map(edu => `
+              <div class="mb-2">
+                <div class="flex justify-between font-bold text-[11px] text-black">
+                  <span>${edu.degree || ''}</span>
+                  <span>${edu.period || ''}</span>
+                </div>
+                <div class="text-[10.5px] text-slate-800">${edu.school || ''}</div>
+                ${edu.gpa ? `<div class="text-[10.5px] text-slate-800 my-0.5">${edu.gpa}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${visibleSections.experience && d.experiences && d.experiences.length ? `
+          <div class="mb-4">
+            <h2 class="text-xs font-bold text-black uppercase tracking-wider border-b border-slate-400 pb-0.5 mb-2">${isAr ? 'الخبرة العملية' : 'WORK EXPERIENCE'}</h2>
+            ${d.experiences.map(exp => `
+              <div class="mb-3">
+                <div class="flex justify-between font-bold text-[11px] text-black">
+                  <span>${exp.title || ''} - ${exp.company || ''}</span>
+                  <span>${exp.period || ''}</span>
+                </div>
+                ${formatExperienceDesc(exp.desc)}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${visibleSections.courses && d.courses && d.courses.length ? `
+          <div class="mb-4">
+            <h2 class="text-xs font-bold text-black uppercase tracking-wider border-b border-slate-400 pb-0.5 mb-2">${isAr ? 'الدورات والتدريب' : 'TRAINING & CERTIFICATIONS'}</h2>
+            ${d.courses.map(crs => `
+              <div class="mb-2">
+                <div class="flex justify-between font-bold text-[11px] text-black">
+                  <span>${crs.title || ''}</span>
+                  <span>${crs.period || ''}</span>
+                </div>
+                ${Array.isArray(crs.bullets) && crs.bullets.length ? `
+                  <ul class="list-disc list-inside text-[10.5px] text-slate-800 mt-0.5 px-2">
+                    ${crs.bullets.filter(b => b.trim()).map(b => `<li class="mb-0.5">${b}</li>`).join('')}
+                  </ul>
+                ` : ''}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${buildSkillsContent(isAr, "text-black border-b border-slate-400")}
+        ${buildLanguagesContent(isAr, "text-black border-b border-slate-400")}
+      `;
+    }
+
+    /* Template: Executive Leader */
+    function renderExecutiveTemplate(preview, d, isAr) {
+      preview.innerHTML = `
+        <div class="bg-slate-900 text-white p-6 -mx-8 -mt-8 mb-6">
+          <h1 class="text-3xl font-extrabold uppercase tracking-tight text-white">${d.fullName || ''}</h1>
+          <h2 class="text-sm font-semibold dynamic-accent-text tracking-widest uppercase mt-1">${d.jobTitle || ''}</h2>
+          
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-300 mt-4 border-t border-slate-800 pt-3">
+            ${d.phone ? `<div><i class="fa-solid fa-phone dynamic-accent-text ${isAr?'ml-1.5':'mr-1.5'}"></i><a href="tel:${d.phone}" class="hover:underline">${d.phone}</a></div>` : ''}
+            ${d.email ? `<div><i class="fa-solid fa-envelope dynamic-accent-text ${isAr?'ml-1.5':'mr-1.5'}"></i><a href="mailto:${d.email}" class="hover:underline">${d.email}</a></div>` : ''}
+            ${d.location ? `<div><i class="fa-solid fa-location-dot dynamic-accent-text ${isAr?'ml-1.5':'mr-1.5'}"></i>${d.location}</div>` : ''}
+            ${d.linkedin ? `<div><i class="fa-brands fa-linkedin dynamic-accent-text ${isAr?'ml-1.5':'mr-1.5'}"></i><a href="${formatUrl(d.linkedin)}" target="_blank" class="hover:underline">LinkedIn</a></div>` : ''}
+            ${d.resumeLink ? `<div><i class="fa-solid fa-link dynamic-accent-text ${isAr?'ml-1.5':'mr-1.5'}"></i><a href="${formatUrl(d.resumeLink)}" target="_blank" class="hover:underline">Portfolio</a></div>` : ''}
+          </div>
+        </div>
+
+        ${visibleSections.summary && d.summary ? `
+          <div class="mb-5">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b-2 dynamic-accent-border pb-1 mb-2">${isAr ? 'الملخص التنفيذي' : 'EXECUTIVE SUMMARY'}</h3>
+            <p class="text-[11px] text-slate-700 leading-relaxed text-justify">${d.summary}</p>
+          </div>
+        ` : ''}
+
+        ${visibleSections.experience && d.experiences && d.experiences.length ? `
+          <div class="mb-5">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b-2 dynamic-accent-border pb-1 mb-2.5">${isAr ? 'الخبرات المهنية' : 'PROFESSIONAL EXPERIENCE'}</h3>
+            <div class="space-y-3.5">
+              ${d.experiences.map(exp => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-xs text-slate-900">
+                    <span>${exp.title || ''} <span class="font-normal text-slate-600">| ${exp.company || ''}</span></span>
+                    <span class="text-slate-500 text-[10px] font-semibold">${exp.period || ''}</span>
+                  </div>
+                  ${formatExperienceDesc(exp.desc)}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${visibleSections.education && d.education && d.education.length ? `
+          <div class="mb-5">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b-2 dynamic-accent-border pb-1 mb-2">${isAr ? 'التعليم' : 'EDUCATION'}</h3>
+            <div class="space-y-2">
+              ${d.education.map(edu => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-xs text-slate-900">
+                    <span>${edu.degree || ''}</span>
+                    <span class="text-slate-500 text-[10px] font-semibold">${edu.period || ''}</span>
+                  </div>
+                  <div class="text-[11px] text-slate-600">${edu.school || ''}</div>
+                  ${edu.gpa ? `<div class="text-[11px] text-slate-700 my-0.5">${edu.gpa}</div>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${visibleSections.courses && d.courses && d.courses.length ? `
+          <div class="mb-5">
+            <h3 class="text-xs font-bold uppercase tracking-wider dynamic-accent-text border-b-2 dynamic-accent-border pb-1 mb-2">${isAr ? 'الدورات والتطوير' : 'TRAINING & DEVELOPMENT'}</h3>
+            <div class="space-y-2">
+              ${d.courses.map(crs => `
+                <div>
+                  <div class="flex justify-between items-baseline font-bold text-xs text-slate-900">
+                    <span>${crs.title || ''}</span>
+                    <span class="text-slate-500 text-[10px] font-semibold">${crs.period || ''}</span>
+                  </div>
+                  ${Array.isArray(crs.bullets) && crs.bullets.length ? `
+                    <ul class="list-disc list-inside text-[10.5px] text-slate-600 mt-1 space-y-0.5 px-2">
+                      ${crs.bullets.filter(b => b.trim()).map(b => `<li class="mb-0.5">${b}</li>`).join('')}
+                    </ul>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${buildSkillsContent(isAr, "dynamic-accent-text border-b-2 dynamic-accent-border")}
+        ${buildLanguagesContent(isAr, "dynamic-accent-text border-b-2 dynamic-accent-border")}
+      `;
+    }
+  </script>
+</body>
+</html>
